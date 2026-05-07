@@ -95,8 +95,8 @@ export default function Hero() {
           className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ color: 'var(--muted)', fontWeight: 300 }}
         >
-          Full-stack developer & AI systems engineer. I build premium digital experiences
-          and autonomous AI pipelines — the kind that look like they cost a million dollars
+          Full-stack developer, AI systems engineer &amp; Dog Walker/Trainer/Breeder. I build
+          premium digital experiences and autonomous AI pipelines — the kind that look like they cost a million dollars
           and work like they were built by a team of ten.
         </motion.p>
 

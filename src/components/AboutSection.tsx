@@ -103,9 +103,9 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base leading-relaxed mb-4" style={{ color: 'var(--muted)', maxWidth: 480 }}>
-              I&apos;m Markus Usche — full-stack developer, AI systems engineer, and founder of
+              I&apos;m Mark Anthony — full-stack developer, AI systems engineer, Dog Walker/Trainer/Breeder and founder of
               NYC Tailblazers. I build digital products that look like they cost a million dollars
-              and work like they were built by a team of ten.
+              and work like they were built by a team of twenty.
             </p>
             <p className="text-base leading-relaxed mb-8" style={{ color: 'var(--muted)', maxWidth: 480 }}>
               From cinematic client websites to autonomous AI pipelines with 49+ agents running 24/7 —
@@ -165,10 +165,10 @@ export default function AboutSection() {
             >
               <p className="text-sm leading-relaxed italic" style={{ color: 'var(--muted)' }}>
                 &ldquo;The goal isn&apos;t just a website. It&apos;s a system — one that works while you sleep,
-                converts while you focus, and scales without you lifting a finger.&rdquo;
+                converts while you focus, and scales without you lifting a finger. A way to bring peace of mind and simplify life&apos;s daily tasks.&rdquo;
               </p>
               <p className="text-xs cinzel tracking-widest mt-3" style={{ color: 'var(--oshun-s)' }}>
-                — MARKUS USCHE, NYC TAILBLAZERS
+                — MARK ANTHONY, NYC TAILBLAZERS
               </p>
             </div>
 

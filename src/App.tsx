@@ -1,21 +1,24 @@
 import { Helmet } from 'react-helmet-async'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
-import FeaturedWork from './components/FeaturedWork'
-import ProjectGrid from './components/ProjectGrid'
+import CinematicScroll from './components/CinematicScroll'
 import AboutSection from './components/AboutSection'
 import ProcessSection from './components/ProcessSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
+import { PROJECTS } from './data/projects'
+
+const WEBSITES  = PROJECTS.filter(p => p.category === 'website')
+const APPS      = PROJECTS.filter(p => p.category === 'app' || p.category === 'pipeline')
 
 export default function App() {
   return (
     <>
       {/* <!-- Elegba opens the way --> */}
       <Helmet>
-        <title>Markus Usche — Cinematic Websites & AI Systems | NYC</title>
-        <meta name="description" content="Full-stack developer and AI systems engineer. Premium websites, mobile apps, and intelligent pipelines built in NYC." />
-        <meta property="og:title" content="Markus Usche — Portfolio" />
+        <title>Mark Anthony — Cinematic Websites & AI Systems | NYC</title>
+        <meta name="description" content="Full-stack developer, AI systems engineer, and Dog Walker/Trainer/Breeder. Premium websites, mobile apps, and intelligent pipelines built in NYC." />
+        <meta property="og:title" content="Mark Anthony — Portfolio" />
         <meta property="og:description" content="Cinematic websites. Intelligent systems. Built in NYC." />
         <meta property="og:url" content="https://portfolio.nyctailblazers.com" />
         <meta property="og:type" content="website" />
@@ -24,7 +27,7 @@ export default function App() {
         <script type="application/ld+json">{JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Markus Usche',
+          name: 'Mark Anthony',
           jobTitle: 'Full-Stack Developer & AI Systems Engineer',
           url: 'https://portfolio.nyctailblazers.com',
           worksFor: { '@type': 'Organization', name: 'NYC Tailblazers' },
@@ -36,8 +39,16 @@ export default function App() {
         <Nav />
         <main>
           <Hero />
-          <FeaturedWork />
-          <ProjectGrid />
+          <CinematicScroll
+            projects={WEBSITES}
+            sectionTitle="WEBSITES"
+            sectionLabel="CLIENT WORK"
+          />
+          <CinematicScroll
+            projects={APPS}
+            sectionTitle="SYSTEMS"
+            sectionLabel="APPS & PIPELINES"
+          />
           <AboutSection />
           <ProcessSection />
           <ContactSection />

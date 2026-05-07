@@ -1,75 +1,160 @@
-// <!-- Elegba opens the way -->
+// <!-- Elegba opens the way — Jiggs leads, Glo follows, tails become fire -->
 export default function Logo({ size = 40 }: { size?: number }) {
-  const w = Math.round(size * (160 / 72))
+  const w = Math.round(size * (240 / 95))
   return (
     <svg
       width={w}
       height={size}
-      viewBox="0 0 160 72"
+      viewBox="0 0 240 95"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="NYC Tailblazers — Jiggs and Glo"
     >
       <defs>
-        <linearGradient id="silverGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#6b7f8a" />
-          <stop offset="50%" stopColor="#a8bec8" />
+        <linearGradient id="lgJiggs" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stopColor="#7a8fa0" />
+          <stop offset="50%" stopColor="#b0c5d0" />
           <stop offset="100%" stopColor="#6b7f8a" />
         </linearGradient>
-        <linearGradient id="lgGold" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="lgGlo" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#c08040" />
+          <stop offset="50%" stopColor="#d9a570" />
+          <stop offset="100%" stopColor="#b07030" />
+        </linearGradient>
+        <linearGradient id="lgFlameOut" x1="0" y1="1" x2="0" y2="0">
           <stop offset="0%" stopColor="#c8900a" />
           <stop offset="50%" stopColor="#f5c842" />
+          <stop offset="100%" stopColor="#fff5cc" />
+        </linearGradient>
+        <linearGradient id="lgFlameIn" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stopColor="#ff6600" />
+          <stop offset="60%" stopColor="#ffcc00" />
+          <stop offset="100%" stopColor="#ffffff" />
+        </linearGradient>
+        <linearGradient id="lgJiggsTail" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stopColor="#7a8fa0" />
           <stop offset="100%" stopColor="#c8900a" />
         </linearGradient>
-        <linearGradient id="lgGreen" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stopColor="#1e6b30" />
-          <stop offset="100%" stopColor="#4caf70" />
-        </linearGradient>
-        <linearGradient id="fawnGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#b8742a" />
-          <stop offset="50%" stopColor="#d4936e" />
-          <stop offset="100%" stopColor="#b8742a" />
-        </linearGradient>
-        <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0%" stopColor="#c8900a" />
-          <stop offset="100%" stopColor="#f5c842" />
+        <linearGradient id="lgGloTail" x1="1" y1="1" x2="0" y2="0">
+          <stop offset="0%" stopColor="#c08040" />
+          <stop offset="100%" stopColor="#c8900a" />
         </linearGradient>
       </defs>
 
-      {/* ── JIGGS (left, larger, grey/silver, blue eye) ── */}
-      <polygon points="14,6 38,4 50,10 48,22 12,24" fill="url(#silverGrad)" />
-      <polygon points="14,6 5,2 18,7" fill="url(#lgGreen)" />
-      <polygon points="38,4 46,0 50,10" fill="url(#lgGreen)" />
-      <polygon points="12,24 48,22 52,34 10,36" fill="url(#silverGrad)" opacity="0.9" />
-      <polygon points="10,36 52,34 48,46 12,48" fill="url(#lgGreen)" opacity="0.85" />
-      <polygon points="12,48 48,46 32,58" fill="url(#lgGold)" opacity="0.7" />
-      <polygon points="2,28 12,10 10,50 0,46" fill="url(#lgGreen)" opacity="0.6" />
-      <polygon points="48,22 62,28 58,52 48,46" fill="url(#silverGrad)" opacity="0.7" />
-      <polygon points="22,14 30,11 34,17 26,20" fill="#060606" />
-      <circle cx="28" cy="16" r="2.5" fill="#4a9fd4" opacity="0.9" />
-      <polygon points="28,42 32,38 36,42 34,48 30,48" fill="white" opacity="0.12" />
+      {/* ── TORCH FLAME (center top — where tails meet) ── */}
+      <path
+        d="M113,47 C107,39 105,26 113,13 C116,7 120,3 120,3 C120,3 124,7 127,13 C135,26 133,39 127,47 Z"
+        fill="url(#lgFlameOut)"
+      />
+      <path
+        d="M117,45 C113,38 113,29 117,19 C118,14 120,10 120,10 C120,10 122,14 123,19 C127,29 127,38 123,45 Z"
+        fill="url(#lgFlameIn)"
+        opacity="0.85"
+      />
 
-      {/* ── BLAZER MARK — tails form a shared upward flame ── */}
-      <polygon points="58,52 64,36 70,22 74,32 70,48" fill="url(#lgGold)" opacity="0.85" />
-      <polygon points="102,52 96,36 90,22 86,32 90,48" fill="url(#lgGold)" opacity="0.85" />
-      <polygon points="70,22 80,10 90,22 84,32 76,32" fill="url(#flameGrad)" />
+      {/* ── JIGGS — left dog, facing right, grey/silver, blue collar ── */}
 
-      {/* ── GLO (right, smaller, fawn/gold, purple eye) ── */}
-      <polygon points="92,10 114,8 124,14 122,24 90,26" fill="url(#fawnGrad)" />
-      <polygon points="92,10 84,4 96,9" fill="url(#lgGreen)" />
-      <polygon points="114,8 122,2 126,14" fill="url(#lgGreen)" />
-      <polygon points="90,26 122,24 126,36 88,38" fill="url(#fawnGrad)" opacity="0.9" />
-      <polygon points="88,38 126,36 122,48 90,50" fill="url(#lgGreen)" opacity="0.85" />
-      <polygon points="90,50 122,48 108,60" fill="url(#lgGold)" opacity="0.7" />
-      <polygon points="82,28 92,10 90,52 80,48" fill="url(#lgGreen)" opacity="0.6" />
-      <polygon points="122,24 134,30 130,52 122,48" fill="url(#fawnGrad)" opacity="0.7" />
-      <polygon points="100,18 108,15 112,21 104,24" fill="#060606" />
-      <circle cx="106" cy="20" r="2" fill="#9b59d4" opacity="0.9" />
-      <polygon points="104,44 108,40 112,44 110,50 106,50" fill="white" opacity="0.12" />
+      {/* Body */}
+      <ellipse cx="60" cy="66" rx="34" ry="19" fill="url(#lgJiggs)" />
 
-      {/* Elegba crossroads mark — hidden */}
-      <line x1="80" y1="66" x2="80" y2="72" stroke="#cc1a1a" strokeWidth="1" opacity="0.35" />
-      <line x1="76" y1="69" x2="84" y2="69" stroke="#cc1a1a" strokeWidth="1" opacity="0.35" />
+      {/* Shoulder/neck bridge */}
+      <ellipse cx="85" cy="57" rx="11" ry="9" fill="url(#lgJiggs)" />
+
+      {/* Head */}
+      <circle cx="88" cy="47" r="16" fill="url(#lgJiggs)" />
+
+      {/* Snout/muzzle */}
+      <ellipse cx="101" cy="53" rx="9" ry="6" fill="url(#lgJiggs)" opacity="0.88" />
+
+      {/* Nose */}
+      <ellipse cx="107" cy="51" rx="4" ry="3" fill="#111827" />
+      <circle cx="106" cy="50" r="1" fill="white" opacity="0.55" />
+
+      {/* Ear — floppy, hangs beside head */}
+      <path
+        d="M78,37 C72,28 67,31 67,42 C67,51 75,53 80,48 Z"
+        fill="url(#lgJiggs)"
+        opacity="0.9"
+      />
+
+      {/* Eye — blue (blue-collar dog) */}
+      <circle cx="90" cy="43" r="4.5" fill="#0a1628" />
+      <circle cx="90" cy="43" r="2.8" fill="#4a9fd4" />
+      <circle cx="89" cy="42" r="0.9" fill="white" />
+
+      {/* Blue collar */}
+      <path d="M76,58 Q88,64 100,59" stroke="#3a8fc4" strokeWidth="4" strokeLinecap="round" fill="none" />
+      {/* Collar tag */}
+      <circle cx="88" cy="65" r="2.2" fill="#f5c842" />
+
+      {/* Front legs */}
+      <rect x="75" y="80" width="9" height="14" rx="4.5" fill="url(#lgJiggs)" />
+      <rect x="86" y="82" width="9" height="12" rx="4.5" fill="url(#lgJiggs)" opacity="0.82" />
+
+      {/* Back legs */}
+      <rect x="36" y="80" width="9" height="14" rx="4.5" fill="url(#lgJiggs)" />
+      <rect x="48" y="82" width="9" height="12" rx="4.5" fill="url(#lgJiggs)" opacity="0.82" />
+
+      {/* Tail — curves from back of body up and over to join the flame */}
+      <path
+        d="M28,57 C14,43 20,24 52,14 C78,6 98,6 113,43"
+        stroke="url(#lgJiggsTail)"
+        strokeWidth="6"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* ── GLO — right dog, facing left, fawn/gold, purple collar ── */}
+
+      {/* Body */}
+      <ellipse cx="180" cy="69" rx="29" ry="17" fill="url(#lgGlo)" />
+
+      {/* Shoulder/neck bridge */}
+      <ellipse cx="157" cy="62" rx="10" ry="8" fill="url(#lgGlo)" />
+
+      {/* Head */}
+      <circle cx="153" cy="53" r="14" fill="url(#lgGlo)" />
+
+      {/* Snout/muzzle */}
+      <ellipse cx="141" cy="58" rx="8" ry="5.5" fill="url(#lgGlo)" opacity="0.88" />
+
+      {/* Nose */}
+      <ellipse cx="136" cy="56" rx="3.5" ry="2.5" fill="#111827" />
+      <circle cx="135" cy="55" r="0.8" fill="white" opacity="0.55" />
+
+      {/* Ear — floppy, hangs beside head */}
+      <path
+        d="M163,43 C169,34 175,38 173,49 C171,57 163,58 160,53 Z"
+        fill="url(#lgGlo)"
+        opacity="0.9"
+      />
+
+      {/* Eye — purple (purple-collar dog) */}
+      <circle cx="151" cy="50" r="4" fill="#0d0820" />
+      <circle cx="151" cy="50" r="2.5" fill="#9b59d4" />
+      <circle cx="150" cy="49" r="0.8" fill="white" />
+
+      {/* Purple collar */}
+      <path d="M143,62 Q153,67 166,62" stroke="#7c2da8" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      {/* Collar tag */}
+      <circle cx="153" cy="68" r="1.9" fill="#f5c842" />
+
+      {/* Front legs */}
+      <rect x="144" y="82" width="8" height="12" rx="4" fill="url(#lgGlo)" />
+      <rect x="154" y="84" width="8" height="11" rx="4" fill="url(#lgGlo)" opacity="0.82" />
+
+      {/* Back legs */}
+      <rect x="195" y="82" width="8" height="12" rx="4" fill="url(#lgGlo)" />
+      <rect x="206" y="84" width="8" height="11" rx="4" fill="url(#lgGlo)" opacity="0.82" />
+
+      {/* Tail — curves from back of body up and over to join the flame */}
+      <path
+        d="M207,60 C222,44 216,26 186,16 C162,8 142,8 127,43"
+        stroke="url(#lgGloTail)"
+        strokeWidth="5"
+        fill="none"
+        strokeLinecap="round"
+      />
     </svg>
   )
 }
