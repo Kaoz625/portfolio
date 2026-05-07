@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="fsi" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6b7f8a"/>
+      <stop offset="50%" stop-color="#a8bec8"/>
+      <stop offset="100%" stop-color="#6b7f8a"/>
+    </linearGradient>
+    <linearGradient id="ffn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b8742a"/>
+      <stop offset="50%" stop-color="#d4936e"/>
+      <stop offset="100%" stop-color="#b8742a"/>
+    </linearGradient>
+    <linearGradient id="fgr" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e6b30"/>
+      <stop offset="100%" stop-color="#4caf70"/>
+    </linearGradient>
+    <linearGradient id="ffl" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#c8900a"/>
+      <stop offset="100%" stop-color="#f5c842"/>
+    </linearGradient>
+  </defs>
+  <!-- Jiggs head (left, silver) -->
+  <polygon points="2,10 12,8 17,11 16,17 1,18" fill="url(#fsi)"/>
+  <polygon points="2,10 0,6 6,9" fill="url(#fgr)"/>
+  <polygon points="12,8 15,5 17,11" fill="url(#fgr)"/>
+  <polygon points="1,18 16,17 18,23 0,24" fill="url(#fsi)" opacity="0.9"/>
+  <circle cx="8" cy="14" r="1.5" fill="#4a9fd4" opacity="0.9"/>
+  <!-- Flame bridge (center) -->
+  <polygon points="18,23 21,16 24,10 27,16 30,23 27,22 24,14 21,22" fill="url(#ffl)"/>
+  <!-- Glo head (right, fawn) -->
+  <polygon points="31,10 41,8 46,11 45,17 30,18" fill="url(#ffn)"/>
+  <polygon points="31,10 28,6 34,9" fill="url(#fgr)"/>
+  <polygon points="41,8 44,5 46,11" fill="url(#fgr)"/>
+  <polygon points="30,18 45,17 47,23 29,24" fill="url(#ffn)" opacity="0.9"/>
+  <circle cx="39" cy="14" r="1.5" fill="#9b59d4" opacity="0.9"/>
+  <!-- Elegba crossroads -->
+  <line x1="24" y1="44" x2="24" y2="48" stroke="#cc1a1a" stroke-width="1" opacity="0.35"/>
+  <line x1="21" y1="46" x2="27" y2="46" stroke="#cc1a1a" stroke-width="1" opacity="0.35"/>
+</svg>
