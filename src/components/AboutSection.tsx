@@ -65,7 +65,7 @@ export default function AboutSection() {
   const inView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden" style={{ background: 'var(--bg)' }}>
+    <section id="about" className="relative py-24 px-6 overflow-hidden" style={{ background: 'var(--bg)' }}>
       {/* Subtle grain overlay */}
       <div className="absolute inset-0 pointer-events-none grain-overlay" />
 

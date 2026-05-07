@@ -42,7 +42,7 @@ export default function ProcessSection() {
   const inView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden" style={{ background: 'var(--surface)' }}>
+    <section id="process" className="relative py-24 px-6 overflow-hidden" style={{ background: 'var(--surface)' }}>
       {/* Top diagonal cut from bg */}
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"

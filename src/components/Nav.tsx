@@ -14,9 +14,9 @@ export default function Nav() {
   }, [])
 
   const links = [
-    { label: 'Websites', href: '#websites' },
-    { label: 'Apps', href: '#apps' },
-    { label: 'Pipelines', href: '#pipelines' },
+    { label: 'Work',    href: '#projects' },
+    { label: 'About',   href: '#about' },
+    { label: 'Process', href: '#process' },
     { label: 'Contact', href: '#contact' },
   ]
 
