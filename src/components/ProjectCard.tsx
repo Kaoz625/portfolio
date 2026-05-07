@@ -88,12 +88,22 @@ export default function ProjectCard({ project, onClick, index }: Props) {
         )}
 
         {/* Featured badge */}
-        {project.featured && (
+        {project.featured && !project.comingSoon && (
           <div
             className="absolute top-3 right-3 px-2 py-0.5 rounded text-xs cinzel font-bold tracking-wider"
             style={{ background: colors.primary, color: '#fff' }}
           >
             FEATURED
+          </div>
+        )}
+
+        {/* Coming soon badge */}
+        {project.comingSoon && (
+          <div
+            className="absolute top-3 right-3 px-2 py-0.5 rounded text-xs cinzel font-bold tracking-wider"
+            style={{ background: 'rgba(30,30,30,0.9)', color: 'var(--muted)', border: '1px solid var(--border)' }}
+          >
+            IN DEV
           </div>
         )}
 

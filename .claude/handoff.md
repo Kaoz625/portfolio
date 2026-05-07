@@ -1,8 +1,8 @@
 # Portfolio Site — Handoff
 
-**Working on:** Portfolio site build — logo, all components, deploy
-**Last action:** `npm run deploy` running (gh-pages push)
-**Next step:** `cd "~/Syncthing/Brain/Markus Brain/NYCTailblazers/Projects/websites/portfolio-site" && npm run deploy` (if not done) → then verify at kaoz625.github.io/portfolio
+**Working on:** Portfolio site build — SHIPPED
+**Last action:** `npm run deploy` → Published to gh-pages ✓ | source pushed to `Kaoz625/portfolio` main branch ✓
+**Next step:** Go to https://github.com/Kaoz625/portfolio/settings/pages → set source to `gh-pages` branch → enable HTTPS + set custom domain `portfolio.nyctailblazers.com`
 
 ## Key files changed this session
 - `src/components/Logo.tsx` — dual-dog SVG (BOTH Jiggs + Glo)

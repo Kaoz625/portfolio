@@ -1,7 +1,10 @@
 import { Helmet } from 'react-helmet-async'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import FeaturedWork from './components/FeaturedWork'
 import ProjectGrid from './components/ProjectGrid'
+import AboutSection from './components/AboutSection'
+import ProcessSection from './components/ProcessSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
 
@@ -33,7 +36,10 @@ export default function App() {
         <Nav />
         <main>
           <Hero />
+          <FeaturedWork />
           <ProjectGrid />
+          <AboutSection />
+          <ProcessSection />
           <ContactSection />
         </main>
         <Footer />
