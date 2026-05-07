@@ -1,0 +1,13 @@
+{
+  "name": "Markus Usche — Portfolio",
+  "short_name": "Portfolio",
+  "description": "Full-stack developer & AI systems engineer. Cinematic websites, mobile apps, and intelligent pipelines built in NYC.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

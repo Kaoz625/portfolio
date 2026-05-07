@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Orisha Color System ─────────────────────────────────── */
+:root {
+  --elegba-p:#cc1a1a;   --elegba-s:#ff6060;   --elegba-g:rgba(204,26,26,0.35);
+  --orunmila-p:#2d8a4e; --orunmila-s:#6ee89a; --orunmila-g:rgba(45,138,78,0.35);
+  --yemoja-p:#1a6abf;   --yemoja-s:#60b4f5;   --yemoja-g:rgba(26,106,191,0.35);
+  --oshun-p:#c8900a;    --oshun-s:#f5c842;    --oshun-g:rgba(200,144,10,0.4);
+  --chango-p:#dd2020;   --chango-s:#ffffff;   --chango-g:rgba(221,32,32,0.4);
+  --oggun-p:#1e6b30;    --oggun-s:#4caf70;    --oggun-g:rgba(30,107,48,0.35);
+  --ochosi-p:#2a8fbf;   --ochosi-s:#f0d060;   --ochosi-g:rgba(42,143,191,0.35);
+  --obatala-p:#9ab0c8;  --obatala-s:#dceaf8;  --obatala-g:rgba(154,176,200,0.3);
+  --oya-p:#7c2da8;      --oya-s:#b86ef5;      --oya-g:rgba(124,45,168,0.4);
+
+  --bg:#080808; --surface:#111111; --surface2:#1a1a1a;
+  --border:rgba(255,255,255,0.07); --text:#f0f0f0; --muted:#777;
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+h1,h2,h3,.cinzel{font-family:'Cinzel',serif}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--oshun-p);border-radius:2px}
+
+/* ── Metallic text ───────────────────────────────────────── */
+.text-gold{
+  background:linear-gradient(135deg,#c8900a 0%,#f5c842 40%,#c8900a 70%,#f5c842 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.text-green-metal{
+  background:linear-gradient(135deg,#1e6b30 0%,#4caf70 50%,#1e6b30 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes lightning{0%,88%,100%{opacity:0}90%,96%{opacity:1}93%{opacity:.3}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 20px var(--oshun-g)}50%{box-shadow:0 0 50px var(--oshun-g),0 0 90px var(--oshun-g)}}
+@keyframes river{0%,100%{d:path("M0,20 Q200,0 400,20 Q600,40 800,20")}50%{d:path("M0,20 Q200,40 400,20 Q600,0 800,20")}}
+@keyframes dash{to{stroke-dashoffset:-24}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes glow-pulse{0%,100%{opacity:.6}50%{opacity:1}}
+
+.animate-float{animation:float 4s ease-in-out infinite}
+.animate-pulse-glow{animation:pulse-glow 3s ease-in-out infinite}
+.animate-lightning{animation:lightning 7s ease-in-out infinite}
+.animate-fade-up{animation:fadeUp .7s ease forwards}
+.animate-glow{animation:glow-pulse 2s ease-in-out infinite}
+
+/* ── Card hover ──────────────────────────────────────────── */
+.card-hover{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.card-hover:hover{transform:translateY(-5px) scale(1.015)}
+
+/* ── Modal ───────────────────────────────────────────────── */
+.modal-backdrop{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+
+/* ── Pipeline connector ──────────────────────────────────── */
+.connector{stroke-dasharray:8 4;animation:dash 1.8s linear infinite}
+
+/* ── Gem border ──────────────────────────────────────────── */
+.gem-border{
+  border:1px solid transparent;
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,
+    linear-gradient(135deg,var(--oshun-p),transparent 50%,var(--orunmila-p)) border-box;
+}
